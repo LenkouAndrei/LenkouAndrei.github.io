@@ -1,0 +1,16 @@
+# v1
+# this is how you add a comment to the manifest.
+
+CACHE MANIFEST
+index.html
+css/print.css
+img/2048.png
+img/build.jpg
+img/cam_be_like.jpg
+img/foto.jpg
+img/mobile.jpg
+img/mobilewebdev.jpg
+img/profilepic.jpg
+img/website.jpg
+views/images/pizzeriaMin.jpg
+js/analitic.js

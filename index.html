@@ -1,19 +1,5 @@
-$url=$GLOBALS['REQUEST_URI'];
-$crc=md5($url);
-
-$modif=time()-@filemtime ("cache/$crc");
-
-if ($modif<600)
-{ 
-include ("cache/$crc");
-exit();
-}
-
-ob_start ();
-
-Как это работает:
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="manifest.cache">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -79,10 +65,3 @@ ob_start ();
     </footer>
   </body>
 </html>
-$cache = ob_get_contents();
-ob_end_clean ();
-echo $cache;
-
-$fp = @fopen ("cache/$crc", "w");
-@fwrite ($fp, $cache);
-@fclose ($fp);
